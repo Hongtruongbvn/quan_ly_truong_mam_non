@@ -1,0 +1,212 @@
+/* Education Section */
+.education-section {
+  background-color: #ffe4e1;
+  padding: 50px 0;
+}
+
+.education-section h2 {
+  color: #ff69b4;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.education-section p,
+.education-section li {
+  color: #333;
+}
+
+.education-section .btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+}
+
+/* Expandable Content */
+#additional-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+#additional-details.expanded {
+  max-height: 2000px; /* Adjust this value based on content */
+}
+
+.school-details {
+  padding: 20px;
+}
+
+.info-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  height: 100%;
+  margin-bottom: 20px;
+}
+
+.info-card h5 {
+  color: #ff69b4;
+  margin-bottom: 15px;
+}
+
+.info-card ul {
+  padding-left: 20px;
+}
+
+.info-card li {
+  margin-bottom: 8px;
+}
+
+.schedule-info {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.detail-section h4 {
+  color: #d6336c;
+  margin-bottom: 20px;
+}
+
+/* Facilities Section */
+.facilities-section {
+  background-color: #f8f9fa;
+  padding: 50px 0;
+}
+
+/* Program Content */
+.program-content h6 {
+  color: #ff69b4;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.daily-schedule {
+  display: grid;
+  gap: 10px;
+}
+
+.daily-schedule p {
+  margin: 0;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: #fff5f7;
+}
+
+.daily-schedule strong {
+  color: #d6336c;
+  margin-right: 10px;
+}
+
+/* Info Card */
+.info-card {
+  height: 100%;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+}
+
+.info-card h5 {
+  color: #ff69b4;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ffe4e1;
+}
+
+.info-card ul {
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.info-card li {
+  margin-bottom: 8px;
+  color: #4a4a4a;
+}
+
+.schedule-info {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+  .education-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .info-card {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .detail-section h4 {
+    font-size: 1.2rem;
+  }
+
+  /* Expandable content */
+  #additional-details {
+    padding: 10px;
+  }
+
+  /* Facility cards */
+  .facilities-section .card-body {
+    padding: 15px;
+  }
+
+  .daily-schedule {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .info-card h5 {
+    font-size: 1.1rem;
+  }
+
+  .info-card ul {
+    padding-left: 15px;
+  }
+}
+
+@media (max-width: 575px) {
+  /* Mobile adjustments */
+  .education-section {
+    padding: 30px 15px;
+  }
+
+  .btn-primary {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1rem;
+  }
+
+  .school-details {
+    padding: 15px;
+  }
+
+  .info-card h5 {
+    font-size: 1rem;
+  }
+
+  .program-content h6 {
+    font-size: 1rem;
+  }
+
+  .daily-schedule p {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,9 @@
+================================================================================
+FILE: css/app.css
+TYPE: CSS Stylesheet
+PATH: C:\Users\hongt\Downloads\Project2/public/css\app.css
+================================================================================
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

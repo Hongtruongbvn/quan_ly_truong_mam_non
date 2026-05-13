@@ -1,0 +1,182 @@
+/* Card chung */
+.card {
+    border-radius: 12px; /* Bo góc nhẹ hơn */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Bóng mềm hơn */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Hiệu ứng khi hover */
+    background-color: #fff; /* Nền trắng tinh */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Hiệu ứng nổi lên */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Tăng bóng khi hover */
+}
+
+/* Phần tiêu đề card */
+.card-header {
+    font-weight: bold;
+    font-size: 18px; /* Tăng kích thước chữ */
+    color: #fff; /* Màu chữ trắng */
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient xanh tím */
+    padding: 10px 15px; /* Thêm khoảng cách bên trong */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2); /* Đường viền mờ phía dưới */
+}
+
+/* Nội dung trong card */
+.card-body {
+    font-size: 15px; /* Tăng nhẹ kích thước chữ */
+    padding: 20px; /* Khoảng cách rộng hơn */
+    line-height: 1.6; /* Giãn dòng cho dễ đọc */
+    color: #333; /* Màu chữ tối */
+}
+
+/* Textarea */
+textarea {
+    resize: none; /* Tắt resize */
+    border-radius: 6px; /* Bo góc */
+    border: 1px solid #ddd; /* Đường viền mờ */
+    padding: 10px; /* Khoảng cách bên trong */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05); /* Hiệu ứng bên trong */
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+textarea:focus {
+    border-color: #2575fc; /* Đổi màu viền khi focus */
+    box-shadow: 0 0 5px rgba(37, 117, 252, 0.4); /* Ánh sáng xanh khi focus */
+    outline: none;
+}
+
+/* Form group */
+form .form-group {
+    margin-bottom: 20px; /* Tăng khoảng cách giữa các nhóm */
+}
+
+/* Tiêu đề */
+h5 {
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #444; /* Màu chữ đậm */
+}
+
+/* Nút chọn */
+select {
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    font-size: 14px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.2s ease;
+}
+
+select:focus {
+    border-color: #6a11cb;
+    outline: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: #fff;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    font-weight: bold;
+    font-size: 18px;
+    color: #fff;
+    padding: 10px 15px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+textarea, select, input {
+    width: 100%;
+    border-radius: 6px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+textarea:focus, select:focus, input:focus {
+    border-color: #2575fc;
+    box-shadow: 0 0 5px rgba(37, 117, 252, 0.4);
+    outline: none;
+}
+
+/* Thanh Toán Và Quản Lý Học Phí */
+.payment-management .card-header {
+    background: linear-gradient(135deg, #ff7eb3, #ff758c); /* Gradient hồng đậm */
+}
+.payment-management .card-body {
+    background-color: #fff3f8; /* Nền sáng nhẹ */
+    color: #ff758c;
+}
+
+/* Đánh Giá */
+.evaluation .card-header {
+    background: linear-gradient(135deg, #6a11cb, #b721ff); /* Gradient tím đậm */
+}
+.evaluation .card-body {
+    background-color: #f3e8ff; /* Nền sáng tím */
+    color: #6a11cb;
+}
+
+/* Quản Lý Lịch Học */
+.schedule-management .card-header {
+    background: linear-gradient(135deg, #28a745, #72d472); /* Gradient xanh lá */
+}
+.schedule-management .card-body {
+    background-color: #eaffea; /* Nền sáng xanh */
+    color: #28a745;
+}
+
+.payment-management .card:hover {
+    box-shadow: 0 10px 20px rgba(255, 117, 140, 0.3); /* Hồng nhạt */
+}
+
+.evaluation .card:hover {
+    box-shadow: 0 10px 20px rgba(186, 86, 255, 0.3); /* Tím nhạt */
+}
+
+.schedule-management .card:hover {
+    box-shadow: 0 10px 20px rgba(40, 167, 69, 0.3); /* Xanh lá nhạt */
+}
+
+.card-header {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase; /* Chữ in hoa */
+    letter-spacing: 1px; /* Khoảng cách chữ */
+}
+
+.card-body p {
+    font-size: 14px; /* Kích thước nhỏ gọn */
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 20px;
+    }
+    .card-header {
+        font-size: 16px;
+    }
+    .card-body {
+        font-size: 14px;
+    }
+}

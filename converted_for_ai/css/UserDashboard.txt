@@ -1,0 +1,188 @@
+================================================================================
+FILE: css/UserDashboard.css
+TYPE: CSS Stylesheet
+PATH: C:\Users\hongt\Downloads\Project2/public/css\UserDashboard.css
+================================================================================
+
+/* Toàn bộ giao diện */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container chính */
+.container {
+    padding: 20px;
+}
+
+/* Bố cục chính */
+.row {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px; /* Khoảng cách giữa các cột */
+    justify-content: space-between;
+}
+
+.col-md-6 {
+    flex: 0 0 48%; /* Mỗi cột chiếm 48% chiều rộng */
+}
+
+/* Responsive cho màn hình nhỏ */
+@media (max-width: 768px) {
+    .row {
+        flex-wrap: wrap; /* Xếp chồng lên nhau trên màn hình nhỏ */
+    }
+
+    .col-md-6 {
+        flex: 0 0 100%; /* Chiếm toàn bộ chiều rộng */
+    }
+}
+
+/* Card */
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Card Header */
+.card-header {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: left; /* Canh trái header */
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px 10px 0 0;
+}
+
+/* Màu sắc card header */
+.card-header.bg-info {
+    background-color: #17a2b8 !important;
+    color: white;
+}
+
+.card-header.bg-warning {
+    background-color: #ffc107 !important;
+    color: #212529;
+}
+
+.card-header.bg-primary {
+    background-color: #007bff !important;
+    color: white;
+}
+
+/* Card body */
+.card-body {
+    padding: 20px;
+}
+
+/* Ảnh người dùng */
+.card-body img {
+    border: 3px solid #17a2b8;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card-body img:hover {
+    transform: scale(1.1);
+}
+
+/* Form group */
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+/* Nút */
+button {
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 1rem;
+}
+
+button.btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+button.btn-danger {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+}
+
+button:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+/* Bảng */
+.table {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.table th,
+.table td {
+    text-align: left;
+    padding: 10px;
+}
+
+.table th {
+    background-color: #f1f1f1;
+    font-weight: bold;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Modal */
+.modal-header {
+    background-color: #007bff;
+    color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.modal-content {
+    border-radius: 10px;
+}
+
+.modal-body p {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.modal-body img {
+    border: 3px solid #007bff;
+}
+
+/* Responsive cho modal */
+@media (max-width: 768px) {
+    .form-group input,
+    .form-group select {
+        font-size: 0.9rem;
+    }
+
+    .modal-body img {
+        width: 80px;
+        height: 80px;
+    }
+}

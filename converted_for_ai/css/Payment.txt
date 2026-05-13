@@ -1,0 +1,237 @@
+================================================================================
+FILE: css/Payment.css
+TYPE: CSS Stylesheet
+PATH: C:\Users\hongt\Downloads\Project2/public/css\Payment.css
+================================================================================
+
+/* Phạm vi CSS dành riêng cho trang thanh toán */
+.payment-page {
+    background-color: #f1d1e1;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 50px auto;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 700px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Tiêu đề chính */
+.payment-page h2 {
+    color: #ec53d0;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+    position: relative;
+}
+
+.payment-page h2::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background-color: #efade9;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 5px;
+}
+
+/* Nhãn form */
+.payment-page .form-label {
+    font-size: 16px;
+    color: #555;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Hộp chọn */
+.payment-page .form-select {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.payment-page .form-select:focus {
+    border-color: #070b07;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    outline: none;
+}
+
+/* Danh sách chi tiết */
+.payment-page #tuition_detail_list .list-group-item {
+    border-radius: 8px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #383838;
+}
+
+/* Nút Thanh Toán */
+.payment-page .btn-pink {
+    background: linear-gradient(to right, #ec53d0, #f7cef8);
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.payment-page .btn-pink:hover {
+    background: linear-gradient(to right, #d748c1, #e6b1e2);
+    transform: translateY(-3px);
+}
+
+/* Tùy chọn đã thanh toán */
+.payment-page option:disabled {
+    color: #aaa;
+    font-style: italic;
+}
+
+/* Hiệu ứng chuyển động */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Điều chỉnh trên thiết bị di động */
+@media (max-width: 767.98px) {
+    .payment-page {
+        padding: 20px;
+    }
+
+    .payment-page h2 {
+        font-size: 24px;
+    }
+
+    .payment-page .form-label {
+        font-size: 14px;
+    }
+
+    .payment-page .btn-pink {
+        font-size: 16px;
+    }
+}
+
+/* Nút Thanh Toán */
+.payment-page .btn-pink {
+    background: linear-gradient(to right, #ec53d0, #f7cef8);
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hiệu ứng hover */
+.payment-page .btn-pink:hover {
+    background: linear-gradient(to right, #d748c1, #e6b1e2);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Hiệu ứng click */
+.payment-page .btn-pink:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Khi nút bị vô hiệu hóa */
+.payment-page .btn-pink:disabled {
+    background: #ddd;
+    color: #888;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Hiệu ứng ánh sáng khi kích hoạt */
+.payment-page .btn-pink::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75px;
+    width: 50px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: rotate(25deg);
+    transition: all 0.3s ease;
+}
+
+.payment-page .btn-pink:hover::after {
+    left: 150%;
+    transition: all 0.5s ease;
+}
+
+/* Nút Thanh Toán */
+.btn-pink {
+    background: linear-gradient(to right, #ec53d0, #f7cef8);
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+}
+
+/* Hiệu ứng hover */
+.btn-pink:hover {
+    background: linear-gradient(to right, #d748c1, #e6b1e2);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Hiệu ứng click */
+.btn-pink:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Khi nút bị vô hiệu hóa */
+.btn-pink:disabled {
+    background: #ddd;
+    color: #888;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Hiệu ứng ánh sáng khi kích hoạt */
+.btn-pink::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75px;
+    width: 50px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: rotate(25deg);
+    transition: all 0.3s ease;
+}
+
+.btn-pink:hover::after {
+    left: 150%;
+    transition: all 0.5s ease;
+}
