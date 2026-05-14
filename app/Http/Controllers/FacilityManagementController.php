@@ -1,15 +1,15 @@
 <?php
 namespace App\Http\Controllers;
 
-use App\Models\total_facilities;
-use App\Models\dentail_facilities;
+use App\Models\Dentail_Facilities;
+use App\Models\Total_Facilities;
 use Illuminate\Http\Request;
 
 class FacilityManagementController extends Controller
 {
     public function index()
     {
-        $totals = total_facilities::with('dentail')->get();
+        $totals = Total_Facilities::with('dentail')->get();
         return view('admin.facilities.index', compact('totals'));
     }
 
@@ -62,7 +62,7 @@ class FacilityManagementController extends Controller
         if (isset($data['dentail'])) {
             foreach ($data['dentail'] as $dentail) {
                 if (isset($dentail['id'])) {
-                    $existingDentail = dentail_facilities::find($dentail['id']);
+                    $existingDentail = Dentail_Facilities::find($dentail['id']);
                     if ($existingDentail) {
                         // Cập nhật thông tin của dentail
                         $existingDentail->update([

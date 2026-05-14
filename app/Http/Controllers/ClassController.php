@@ -7,10 +7,9 @@ use App\Http\Controllers\Controller;
 use App\Models\Classroom;
 use App\Models\User;
 use App\Http\Requests\ClassRequest;
-use App\Models\facilities;
-use App\Models\total_facilities;
-use App\Models\dentail_facilities;
-use Illuminate\Http\Request;
+use App\Models\Dentail_Facilities;
+use App\Models\Facilities;
+use App\Models\Total_Facilities;
 
 class ClassController extends Controller
 {
@@ -27,7 +26,7 @@ class ClassController extends Controller
             ->get();
 
         $allTeachers = User::where('role', 1)->get(); 
-        $totalFacilities = total_facilities::with('dentail')->get(); 
+        $totalFacilities = Total_Facilities::with('dentail')->get(); 
 
         return view('admin.classrooms.create', compact('teachers', 'allTeachers', 'totalFacilities'));
     }
@@ -40,7 +39,7 @@ class ClassController extends Controller
 
         if ($request->has('facility_details')) {
             foreach ($request->input('facility_details') as $dentailId => $facilityDetail) {
-                $dentailFacility = dentail_facilities::find($dentailId);
+                $dentailFacility = Dentail_Facilities::find($dentailId);
 
                 if ($dentailFacility) {
                     // Trừ số lượng trực tiếp
@@ -105,7 +104,7 @@ class ClassController extends Controller
 
             // Xóa facility cũ: cộng lại số lượng vào dentail_facilities
             foreach ($deletedIds as $facilityId) {
-                $facility = facilities::find($facilityId);
+                $facility = Facilities::find($facilityId);
                 if ($facility) {
                     $dentailFacility = dentail_facilities::find($facility->dentail_id);
                     if (!$dentailFacility) {

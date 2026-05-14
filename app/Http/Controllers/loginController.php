@@ -3,12 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\child;
-use App\Models\childclass;
-use App\Models\classroom;
 use Illuminate\Support\Str;
 use App\Models\User;
-use App\Models\weekevaluate;
-use Carbon\Carbon;
+use App\Models\WeekEvaluate;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;

@@ -2,10 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\classroom;
-use App\Models\schedule;
-use App\Models\schedule_info;
-use App\Models\subject;
+
 use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Support\Facades\Storage;

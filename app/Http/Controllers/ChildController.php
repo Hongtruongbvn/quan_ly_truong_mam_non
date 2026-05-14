@@ -7,7 +7,6 @@ use App\Models\Child;
 use App\Models\User;
 use App\Http\Requests\ChildRequest;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 use App\Imports\ChildrenImport;
 use App\Exports\ChildrenExport;

@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\child;
-use App\Models\tuition;
-use App\Models\tuition_info;
+use App\Models\Child;
+use App\Models\Tuition;
+use App\Models\Tuition_Info;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
@@ -20,7 +20,7 @@ class paymentController extends Controller
     function index(){
         $user = Auth::user();
         $children = Child::where('user_id', $user->id)->with('user')->get();
-        $tuitions = tuition::with('tuition_info')->get();
+        $tuitions = Tuition::with('tuition_info')->get();
         return view('test/momo', compact('tuitions','children'));
     }
 
@@ -214,7 +214,7 @@ public function stripe_payment(Request $request)
             'cancel_url' => route('momo'),
         ]);
          $tuition->update(['status' => 1]);
-            $details = tuition_info::where('tuition_id', $request->tuition_id)->get();
+            $details = Tuition_Info::where('tuition_id', $request->tuition_id)->get();
         $user = Auth::user();
         $userEmail = $user->email;
         $orderId = $session->id;

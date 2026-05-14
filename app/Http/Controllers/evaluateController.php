@@ -2,16 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\classroom;
-use App\Models\User;
-use App\Models\weekevaluate;
+use App\Models\Classroom;
+use App\Models\WeekEvaluate;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class evaluateController extends Controller
 {
     function index($id){
-        $classrooms= classroom::where('user_id',$id)->get();
+        $classrooms= Classroom::where('user_id',$id)->get();
         $data = [];
         foreach ($classrooms as $classroom) {
         $children = array_merge($data, $classroom->children->toArray());
@@ -51,7 +50,7 @@ public function evaluatecomment(Request $request)
     'date.date_equals' => 'Ngày không được vượt quá hôm nay.',
     'child_id.exists' => 'Học sinh được chọn không tồn tại.'
 ]);
-    $evaluate = weekevaluate::with('child')
+    $evaluate = WeekEvaluate::with('child')
                         ->where('child_id', $request->input('child_id'))
                         ->where('date', $request->input('date'))
                         ->first();

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Child;
 use App\Models\Classroom;
-use App\Models\Childclass;
+use App\Models\ChildClass;
 use Illuminate\Http\Request;
 
 class ChildClassController extends Controller

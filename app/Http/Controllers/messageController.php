@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\child;
-use App\Models\Childclass;
-use App\Models\classroom;
-use App\Models\message;
+use App\Models\Child;
+use App\Models\ChildClass;
+use App\Models\Classroom;
+use App\Models\Message;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -38,11 +38,11 @@ class messageController extends Controller
 
        $teachersArray = [];
 
-$children = child::where('user_id', $user->id)->get();
+$children = Child::where('user_id', $user->id)->get();
 
 foreach ($children as $child) {
-    $childclass = Childclass::where('child_id', $child->id)->get();
-    $classrooms = classroom::whereIn('id', $childclass->pluck('classroom_id'))->get();
+    $childclass = ChildClass::where('child_id', $child->id)->get();
+    $classrooms = Classroom::whereIn('id', $childclass->pluck('classroom_id'))->get();
 
     $teachers = User::where('role', 1)
                     ->whereHas('classroom', function ($query) use ($classrooms) {

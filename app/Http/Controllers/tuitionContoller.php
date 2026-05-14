@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\child;
-use App\Models\childclass;
-use App\Models\classroom;
-use App\Models\tuition;
-use App\Models\tuition_info;
+use App\Models\Child;
+use App\Models\Classroom;
+use App\Models\Tuition;
+use App\Models\Tuition_Info;
 use Illuminate\Http\Request;
 
 class tuitionContoller extends Controller
@@ -53,14 +52,14 @@ public function index(Request $request)
         $children = Classroom::findOrFail($request->classroom_id)->children;
 
         foreach ($children as $child) {
-            $tuition = tuition::create([
+            $tuition = Tuition::create([
                 'semester' => $request->semester,
                 'child_id' => $child->id,
                 'status' => 0, 
             ]);
 
             foreach ($request->tuition_details as $detail) {
-                tuition_info::create([
+                Tuition_Info::create([
                     'name' => $detail['name'],
                     'price' => $detail['price'],
                     'tuition_id' => $tuition->id,

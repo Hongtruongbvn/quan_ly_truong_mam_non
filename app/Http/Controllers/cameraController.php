@@ -2,18 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\cam;
+use App\Models\Cam;
 use Illuminate\Http\Request;
 
 class cameraController extends Controller
 {
     public function index() {
-    $cameras = cam::all();
+    $cameras = Cam::all();
     return view('camdemo.cam', compact('cameras'));
 }
 
 public function indexUser() {
-    $cameras = cam::all();
+    $cameras = Cam::all();
     return view('camdemo.camuser', compact('cameras'));
 }
 
@@ -29,7 +29,7 @@ public function indexUser() {
             'stream_url' => 'required|url',
         ]);
 
-        cam::create([
+        Cam::create([
             'name' => $request->name,
             'stream_url' => $request->stream_url,
         ]);
@@ -38,7 +38,7 @@ public function indexUser() {
     }
     public function destroy($id)
 {
-    $camera = cam::find($id);
+    $camera = Cam::find($id);
     if ($camera) {
         $camera->delete();
     }
