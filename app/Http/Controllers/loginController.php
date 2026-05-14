@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\child;
+use App\Models\Child;
 use Illuminate\Support\Str;
 use App\Models\User;
 use App\Models\WeekEvaluate;
