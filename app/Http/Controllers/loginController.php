@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\child;
-use App\Models\childclass;
-use App\Models\classroom;
+use App\Models\Child;
+use App\Models\ChildClass;
+use App\Models\Classroom;
 use Illuminate\Support\Str;
 use App\Models\User;
-use App\Models\weekevaluate;
+use App\Models\WeekEvaluate;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
