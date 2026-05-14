@@ -1,84 +1,65 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nursery Schedule</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/NurserySchedule.css') }}">
-</head>
-<body>
-    <!-- Header Section -->
-    <header class="py-3 shadow-sm" style="background-color: #ffe4e1;">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="title">NURSERY SCHEDULE</div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="#">Trang chủ</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Lịch trình</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Giáo dục</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Liên hệ</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Đăng nhập</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </header>
+@extends('layouts.dashboard')
 
-    <!-- Schedule Section -->
-    <main class="schedule-section py-5">
-        <div class="container">
-            <h2 class="text-center mb-4" style="color: #d6336c;">Lịch trình Nursery</h2>
-            
-            <!-- Schedule Table -->
-            <div class="table-responsive">
-                <table class="table table-bordered table-hover">
-                    <thead class="table-pink">
+@section('content')
+<link rel="stylesheet" href="{{ asset('css/NurserySchedule.css') }}">
+
+<div class="container py-4">
+    <!-- Nút trở về -->
+    <div class="d-flex justify-content-start mb-4">
+        <a href="javascript:history.back();" class="btn px-4 py-2 shadow-sm rounded-pill fw-bold text-white d-flex align-items-center gap-2" style="background-color: #ff69b4; border:none;">
+            <i class="bi bi-arrow-left-circle fs-5"></i> Quay Về
+        </a>
+    </div>
+
+    <!-- Nội dung bảng -->
+    <div class="card border-0 shadow-sm rounded-4 overflow-hidden mb-5 mx-auto" style="background-color: #fff9fc; max-width: 900px; border: 1px solid #ffd1dc !important;">
+        <div class="card-header border-0 text-center py-4 bg-white border-bottom border-light">
+            <h3 class="fw-bold mb-0" style="color: #ec53d0;"><i class="bi bi-calendar2-check text-warning me-2"></i> Lịch Trình Nursery</h3>
+        </div>
+
+        <div class="card-body p-4 p-md-5 text-center">
+            <div class="table-responsive bg-white rounded-3 shadow-sm border border-light">
+                <table class="table table-bordered table-hover align-middle m-0 text-center">
+                    <thead style="background-color: #ffebf0;">
                         <tr>
-                            <th>Thời gian</th>
-                            <th>Hoạt động</th>
-                            <th>Giáo viên</th>
-                            <th>Ghi chú</th>
-                            <th>Hành động</th>
+                            <th class="py-3" style="color: #d6336c;">Thời gian</th>
+                            <th class="py-3" style="color: #d6336c;">Hoạt động</th>
+                            <th class="py-3" style="color: #d6336c;">Giáo viên</th>
+                            <th class="py-3" style="color: #d6336c;">Ghi chú</th>
+                            <th class="py-3" style="color: #d6336c;">Hành động</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>08:00 - 09:00</td>
-                            <td>Đón trẻ</td>
-                            <td>Cô A</td>
-                            <td>-</td>
+                            <td class="fw-semibold">08:00 - 09:00</td>
+                            <td class="fw-bold">Đón trẻ</td>
+                            <td class="text-primary">Cô A</td>
+                            <td class="text-muted">-</td>
                             <td>
-                                <button class="btn btn-sm btn-primary">Chỉnh sửa</button>
-                                <button class="btn btn-sm btn-danger">Xóa</button>
+                                <button class="btn btn-warning btn-sm text-dark px-3 fw-semibold shadow-sm rounded-pill me-1"><i class="bi bi-pencil-square"></i> Chỉnh sửa</button>
+                                <button class="btn btn-danger btn-sm px-3 fw-semibold shadow-sm rounded-pill text-white"><i class="bi bi-trash"></i> Xóa</button>
                             </td>
                         </tr>
                         <tr>
-                            <td>09:00 - 10:00</td>
-                            <td>Học tập nhóm</td>
-                            <td>Cô B</td>
-                            <td>-</td>
+                            <td class="fw-semibold">09:00 - 10:00</td>
+                            <td class="fw-bold">Học tập nhóm</td>
+                            <td class="text-primary">Cô B</td>
+                            <td class="text-muted">-</td>
                             <td>
-                                <button class="btn btn-sm btn-primary">Chỉnh sửa</button>
-                                <button class="btn btn-sm btn-danger">Xóa</button>
+                                <button class="btn btn-warning btn-sm text-dark px-3 fw-semibold shadow-sm rounded-pill me-1"><i class="bi bi-pencil-square"></i> Chỉnh sửa</button>
+                                <button class="btn btn-danger btn-sm px-3 fw-semibold shadow-sm rounded-pill text-white"><i class="bi bi-trash"></i> Xóa</button>
                             </td>
                         </tr>
-                        <!-- Add more rows as needed -->
                     </tbody>
                 </table>
             </div>
             
-            <!-- Add Schedule Button -->
             <div class="text-center mt-4">
-                <button class="btn btn-pink">Thêm lịch trình</button>
+                <button class="btn px-4 py-2 fw-bold text-white shadow-sm rounded-pill" style="background-color: #ff69b4;">
+                    <i class="bi bi-plus-lg me-1"></i> Thêm Lịch Trình
+                </button>
             </div>
         </div>
-    </main>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+    </div>
+</div>
+@endsection
