@@ -13,9 +13,9 @@ class Schedule extends Model
         'classroom_id'
     ];
     function classroom(){
-        return $this->belongsTo(classroom::class,'classroom_id');
+        return $this->belongsTo(Classroom::class,'classroom_id');
     }
     function schedule_info(){
-        return $this->hasMany(schedule_info::class,'schedule_id');
+        return $this->hasMany(Schedule_Info::class,'schedule_id');
     }
 }
