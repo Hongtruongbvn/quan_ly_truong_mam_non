@@ -127,4 +127,14 @@ Deployment
 
 This project is deployed on Render:
 
-Live Demo Deployment
+Live Demo Deployment : https://quan-ly-truong-mam-non.onrender.com/login 
+Demo Accounts
+Admin Account
+Phone Number: 0987654321
+Password: 12345678
+Teacher Account
+Email: teacher0@nursery.com
+Password: 12345678
+Parent Account
+Email: parent0@gmail.com
+Password: 12345678
