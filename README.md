@@ -1,5 +1,9 @@
 <img width="2559" height="1389" alt="image" src="https://github.com/user-attachments/assets/36f8ccdf-959a-42fb-be09-f0c10eafbf02" />
-home page
+<img width="2559" height="1383" alt="image" src="https://github.com/user-attachments/assets/18d1a059-c13b-4952-a459-9613cc996033" />
+<img width="2559" height="1528" alt="image" src="https://github.com/user-attachments/assets/ec2bd04d-d2d5-4cc8-97b6-c9f631516e23" />
+<img width="2559" height="1403" alt="image" src="https://github.com/user-attachments/assets/2433396b-1cb3-4bbe-a561-a0291c9af97a" />
+<img width="2559" height="1390" alt="image" src="https://github.com/user-attachments/assets/b5f16247-51e4-4b3e-9839-e8890504ea6a" />
+
 Nursery School Management System
 Overview
 
