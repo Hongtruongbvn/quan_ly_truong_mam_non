@@ -14,6 +14,6 @@ class Dentail_Facilities extends Model
         'quantity'
     ];
     function Total(){
-        return $this->belongsTo(total_facilities::class,'total_id');
+        return $this->belongsTo(Total_Facilities::class,'total_id');
     }
 }
