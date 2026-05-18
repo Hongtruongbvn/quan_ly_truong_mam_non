@@ -17,14 +17,14 @@ class Classroom extends Model
         return $this->belongsTo(User::class,'user_id');
     }
      function facilities(){
-        return $this->hasMany(facilities::class,'classroom_id');
+        return $this->hasMany(Facilities::class,'classroom_id');
     }
     function schedule(){
-        return $this->hasMany(schedule::class,'classroom_id');
+        return $this->hasMany(Schedule::class,'classroom_id');
     }
     public function children()
 {
-    return $this->belongsToMany(child::class, 'childclasses', 'classroom_id', 'child_id');
+    return $this->belongsToMany(Child::class, 'childclasses', 'classroom_id', 'child_id');
 }
 
 }
