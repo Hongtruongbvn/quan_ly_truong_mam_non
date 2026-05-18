@@ -14,10 +14,10 @@ class Schedule_Info extends Model
         'subject_id'
     ];
     function schedule(){
-        return $this->belongsTo(schedule::class,'schedule_id');
+        return $this->belongsTo(Schedule::class,'schedule_id');
     }
     function subject(){
-        return $this->belongsTo(subject::class,'subject_id');
+        return $this->belongsTo(Subject::class,'subject_id');
     }
 
 }
