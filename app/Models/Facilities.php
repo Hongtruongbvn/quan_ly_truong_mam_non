@@ -15,10 +15,10 @@ class Facilities extends Model
         'dentail_id'
     ];
     function classrooms(){
-        return $this->belongsTo(classroom::class,'classroom_id');
+        return $this->belongsTo(Classroom::class,'classroom_id');
     }
     function dentail()
     {
-        return $this->belongsTo(dentail_facilities::class, 'dentail_id');
+        return $this->belongsTo(Dentail_Facilities::class, 'dentail_id');
     }
 }
