@@ -15,6 +15,6 @@ class WeekEvaluate extends Model
         'child_id'
     ];
     function child(){
-        return $this->belongsTo(child::class,'child_id');
+        return $this->belongsTo(Child::class,'child_id');
     }
 }
