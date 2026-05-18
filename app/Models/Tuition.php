@@ -14,10 +14,10 @@ class Tuition extends Model
         'status'
     ];
     function child(){
-        return $this->belongsTo(child::class,'child_id');
+        return $this->belongsTo(Child::class,'child_id');
     }
     function tuition_info(){
-        return $this->hasMany(tuition_info::class,'tuition_id');
+        return $this->hasMany(Tuition_Info::class,'tuition_id');
     }
 public function classroom()
 {
