@@ -19,13 +19,13 @@ class Child extends Model
         return $this->hasMany(Attendant::class,'child_id');
     }
     public function tuition(){
-        return $this->hasMany(tuition::class,'child_id');
+        return $this->hasMany(Tuition::class,'child_id');
     }
     public function classroom()
     {
-        return $this->belongsToMany(classroom::class, 'childclasses', 'child_id', 'classroom_id');
+        return $this->belongsToMany(Classroom::class, 'childclasses', 'child_id', 'classroom_id');
     }
     function weekevaluate(){
-        return $this->hasMany(weekevaluate::class,'child_id');
+        return $this->hasMany(WeekEvaluate::class,'child_id');
     }
 }
