@@ -14,6 +14,6 @@ class Tuition_Info extends Model
         'tuition_id'
     ];
     function tuition(){
-        return $this->belongsTo(tuition::class,'tuition_id');
+        return $this->belongsTo(Tuition::class,'tuition_id');
     }
 }
