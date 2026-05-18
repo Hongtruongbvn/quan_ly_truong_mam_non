@@ -21,11 +21,11 @@ class User extends Authenticatable
     }
     public function classroom()
     {
-        return $this->hasOne(classroom::class, 'user_id');
+        return $this->hasOne(Classroom::class, 'user_id');
     }
      public function feedback()
     {
-        return $this->hasMany(feedback::class, 'user_id');
+        return $this->hasMany(Feedback::class, 'user_id');
     }
     /**
      * Kiểm tra nếu user là giáo viên.
