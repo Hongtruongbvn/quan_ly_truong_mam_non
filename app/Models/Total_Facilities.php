@@ -12,6 +12,6 @@ class Total_Facilities extends Model
         'name'
     ];
     function dentail(){
-        return $this->hasMany(dentail_facilities::class,'total_id');
+        return $this->hasMany(Dentail_Facilities::class,'total_id');
     }
 }
